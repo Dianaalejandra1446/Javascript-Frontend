@@ -12,18 +12,23 @@ function agregarCampo() {
     input.type = 'text';
     input.style.height = '50px';
     input.name = 'campo' + (cont);
+    input.color = 'white'
 
   // Agregar la etiqueta y la caja de texto al formulario
   formulario.appendChild(label);
   formulario.appendChild(input);
   
+  const color = input.style.backgroundColor = "hotpink"
+  const botonCambiarcolor = document.getElementById('cambiarcolor');
+  botonCambiarcolor.addEventListener('click', color );
+
+
   cont=cont+1;
 }
 
-// Obtener el botón de "Agregar Campo" y agregar un manejador de eventos <textarea name="" id="" cols="30" rows="10"></textarea>
+// Obtener el botón de "Agregar Campo" y agregar un manejador de eventos 
 const botonAgregarCampo = document.getElementById('agregarCampo');
 botonAgregarCampo.addEventListener('click', agregarCampo);
 
-const botonCambiarcolor = document.getElementById('cambiarcolor');
-botonCambiarcolor.addEventListener('click', cambiarcolor);
-botonAgregarCampo.style.backgroundColor = "hotpink"
+
+
