@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(Fondo-formulario-pc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.subcontainer {
+    align-self: center;
+    margin-top: 15%;
+}
+.subcontainer form {
+    display: flex;
+    flex-direction: column;
+}
+.subcontainer #agregarCampo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 100px;
+    font-family: 'Martian Mono', monospace;
+    padding: 15px;
+}
+.subcontainer #cambiarcolor {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 135px;
+    font-family: 'Martian Mono', monospace;
+    padding: 15px;
+}
+
+.subcontainer h1 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: rgb(23, 23, 133);
+    font-size: 30px;
+    padding: 15px;
+}
+.subcontainer h1:hover{
+    color: #fff;
+    text-shadow: 0 0 5px #4b8ce0,
+    0 0 25px #1235f8,
+    0 0 50px #949fff,
+    0 0 100px #acb4ff;
+  }
+label {
+    font-family: 'Martian Mono', monospace;
+    padding: 10px;
+    text-align: center;
+}
