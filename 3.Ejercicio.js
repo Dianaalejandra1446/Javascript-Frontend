@@ -8,7 +8,7 @@ function agregarCampo() {
   label.textContent = 'Etiqueta ' + (cont) + ': ';
 
   // Crear una nueva caja de texto <input>
-  const input = document.createElement('textArea');
+  const input = document.createElement('textarea');
     input.type = 'text';
     input.style.height = '50px';
     input.name = 'campo' + (cont);
@@ -17,18 +17,21 @@ function agregarCampo() {
   // Agregar la etiqueta y la caja de texto al formulario
   formulario.appendChild(label);
   formulario.appendChild(input);
-  
-  const color = input.style.backgroundColor = "hotpink"
-  const botonCambiarcolor = document.getElementById('cambiarcolor');
-  botonCambiarcolor.addEventListener('click', color );
-
 
   cont=cont+1;
+}
+function cambiarColor(){
+  const cambiar = document.getElementsByTagName('textarea');
+
+  for (let i = 0; i < cambiar.length; i++) {
+    cambiar[i].style.backgroundColor = 'hotpink'  
+  }
 }
 
 // Obtener el botón de "Agregar Campo" y agregar un manejador de eventos 
 const botonAgregarCampo = document.getElementById('agregarCampo');
 botonAgregarCampo.addEventListener('click', agregarCampo);
 
-
+const botonCambiarColor = document.getElementById('colorsitos');
+botonCambiarColor.addEventListener('click', cambiarColor);
 

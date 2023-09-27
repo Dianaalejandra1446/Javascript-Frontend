@@ -30,7 +30,7 @@ body{
     font-family: 'Martian Mono', monospace;
     padding: 15px;
 }
-.subcontainer #cambiarcolor {
+.subcontainer #colorsitos {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
