@@ -8,9 +8,10 @@ let agregarPrecio = document.getElementById('precio');
 
 // Lista de precios
 const precios = [];
+const Nombres = []
 Ingresar.addEventListener('click',()=>{
     precios.push(agregarPrecio.value)
-    console.log(precios)
+    Nombres.push(agregarProducto.value)
 })
 //Funcion para calcular precios con descuento
 function calcularDescuento(){
@@ -19,10 +20,16 @@ function calcularDescuento(){
         const precioConDescuento = precio -(precio *(descuento /100));
         return precioConDescuento.toFixed(2); //Redondear a  2 decimales
     });
+    console.log(preciosConDescuento);
+    console.log(Nombres)
     resultados.innerHTML = '<h2>Precios con Descuento:</h2>';
-    preciosConDescuento.forEach((precio, index) => {
-        resultados.innerHTML += `<p>Producto ${index + 1}: $${precio}</p>`;
-    });
+
+ for (let i = 0; i < preciosConDescuento.length; i++) {
+    let allproductos  = document.createElement('p')
+    allproductos.textContent = `Producto ${Nombres[i]}: $${preciosConDescuento[i]}`
+    resultados.appendChild(allproductos)
+    
+ }
 }
 
 // Agregar evento al boton "Calcular"

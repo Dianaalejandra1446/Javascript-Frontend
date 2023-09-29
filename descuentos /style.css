@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(./images/fondo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.menu {
+    background-color: rgba(202, 214, 224, 0.479);
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(15, 65, 99);
+}
+p {
+    font-family: 'Changa', sans-serif;
+}
