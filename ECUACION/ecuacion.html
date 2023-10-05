@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" id="estiloscss" href="styles.css">
+    <title>Ecuacion </title>
+</head>
+<body id="estilo">
+    
+    <section class="ejercicio">
+        <h1>Ecuacion cuadratica</h1>
+        <label for="a">a: </label>
+        <input type="number" name="a" id="a">
+        
+        <label for="b">b:</label>
+        <input type="number" name="b" id="b">
+        
+        <label for="c">c:</label>
+        <input type="number" name="c" id="c">
+
+        
+        <div id="x1"></div>
+        <button id="ingresar">Ingresar x1</button>
+        <div id="x2"></div>
+        <button id="ingresarx2">Ingresar x2</button>
+    </section>
+    
+    <section>
+        <h1>Elige tu estilo Tematico:</h1>
+        <p>Seleccione su estilo temático:</p>
+        <label for="estiloSelector">Estilos:</label>
+        <select id="estiloSelector">
+            <option value="estilo1">Estilo 1(Rosa)</option>
+            <option value="estilo2">Estilo 2(Amarillo)</option>
+            <option value="estilo3">Estilo 3(Azul)</option>
+        </select>
+        <button id="guardarEstilo">Guardar Estilo</button>
+    </section>
+    <script src="ecuacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="./images/javascript.png" alt="Icono"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Push
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Teoria</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Sintaxis</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Ejemplos</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Pop
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Teoria</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Sintaxis</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Ejemplos</a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="teoria">
+            <h1>Aprendiendo Metodos Arrays</h1>
+
+            <h1>Metodo Push</h1>
+            <p>El método push() es usado para agregar un elemento al final de un arreglo.Digamos que tienes un arreglo de elementos, cada elemento es una cadena que representa una tarea que necesitas realizar. Tendría sentido agregar nuevos elementos al final del arreglo para poder terminar primero las tareas anteriores.</p>
+            <img src="./images/ejemplo.jpeg" alt="ejemplo">
+            <p>Digamos que quisiéramos agregar dos o tres elementos a la vez a nuestra lista, ¿Qué haríamos entonces? Resulta que push() puede aceptar que se agreguen varios elementos a la vez.</p>
+
+            <h1>Metodo pop</h1>
+            <p>El método pop en JavaScript es una herramienta útil cuando necesitas eliminar el último elemento de un array. Este método no solo elimina el último elemento, sino que también lo devuelve.</p>
+
+            <h1>Diferencias:</h1>
+            <img src="./images/diferencias.svg" alt="diferencias">
+        </div>
+        <div class="sintaxis">
+            <h1>Sintaxis</h1>
+            <pre class="sintax-push" >// Declaramos un array vacío
+                <h2>Sintaxis Metodo Push</h2>
+                var frutas = [];
+                
+                // Utilizamos el método push para agregar elementos al array
+                frutas.push("manzana");
+                frutas.push("banana");
+                frutas.push("uva");
+                // Imprimimos el contenido del array
+                console.log(frutas); // Output: ["manzana", "banana", "uva"]
+
+                <div class="explicacion">
+        
+                    En este ejemplo, declaramos un array vacío llamado "frutas". Luego, utilizamos el método push para agregar elementos al array. Cada vez que utilizamos push, le pasamos como argumento el elemento que queremos agregar al final del array. En este caso, agregamos las frutas "manzana", "banana" y "uva". Al imprimir el contenido del array, obtenemos el resultado ["manzana", "banana", "uva"].
+                </div>
+            </pre>
+            <pre class="sintax-pop">
+                <h2>Sintaxis pop</h2>
+                // Creamos un array de nombres
+                let nombres = ['Ana', 'Juan', 'María', 'Pedro'];
+
+                // Utilizamos el método pop para eliminar el último elemento del array
+                let ultimoNombre = nombres.pop();
+
+                // Imprimimos el último elemento eliminado y el array actualizado
+                console.log('Último nombre eliminado:', ultimoNombre);
+                console.log('Array actualizado:', nombres);
+                <div class="expliacion">
+                    En este ejemplo, utilizamos el método pop() para eliminar el último elemento del array nombres. El método pop() devuelve el elemento eliminado, que almacenamos en la variable ultimoNombre. Luego, imprimimos el elemento eliminado y el array actualizado usando console.log().
+                </div> 
+            </pre>
+        </div>
+        <div class="ejemplos">
+            <label>Ingresar Nombre:</label>
+            <input type="text" id="nombre">
+            <br>
+            <button id="agregar" onclick="agregar()">Agregar al final</button>
+            <button id="eliminar" onclick="eliminar()">Eliminar elemento final</button>
+            <ul id="lista"></ul>
+        </div>
+    </main>
+    <footer></footer>
+    <script>
+        const d=document;
+
+        
+        let lista2=[];
+        function agregar(){
+            let name=d.getElementById('nombre').value;//solo el valor
+            let lista=d.getElementById('lista');//nos adueñamos de la lista
+            let add=d.getElementById('agregar');//nos adueñamos del boton
+            lista2.push(name);
+            for(let i=0; i<lista2.length; i++){
+                lista.innerHTML='';
+                lista.innerHTML+='<li>'+lista2[i]+'</li>';
+            }
+        }
+
+        function eliminar(){
+            let del=d.getElementById('eliminar');
+
+            lista2.pop();
+            console.log(lista2);
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
