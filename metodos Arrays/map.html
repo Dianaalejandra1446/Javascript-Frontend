@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos Arrays</title>
+</head>
+<body>
+    <script>
+        //metodo map
+        // Permite recorrer el array y modificar los elementos presentes en él, retornando un nuevo array con la misma longitud que el original.
+        const array = [1,2,3,4,5,6,7]
+        const resultArray = array.map(element => element +10);//le suma 10 a los elementos
+        console.log(resultArray);// [11,12,13,14,15,16,17]
+
+        let arr = [3,4,5,6];
+
+        let modifiedArr = arr.map(function(element){
+            return element * 3;
+        });
+        console.log(modifiedArr)//[9,12,15,18]
+
+        //Se utiliza comúnmente para aplicar algunos cambios a los elementos.
+        let users = [
+            {firstName : 'Tatiana', lastName: 'Suarez'},
+            {firstName : 'Alejandro', lastName: 'Palacio'},
+            {firstName : 'Julian', lastName: 'Perez'}
+        ];
+
+        let userFullnames = users.map(function(element){
+            return `Nombre = ` + `${element.firstName} ${element.lastName}`;
+        })
+
+        console.log(userFullnames);
+        //Returna los nombres completos
+
+        //Los arrays comienzan desde [0]Tatiana Suarez [1]Diego Palacio [2] Julian Perez
+
+        //Otros ejemplos
+        const numeros = [1,2,3,4,5];
+        const resultado = numeros.map(function(numero){
+            return numero **2;
+        });
+
+        console.log(resultado)
+
+        //Ultimo ejemplo
+        const nombresrandom = ['Ayano', 'sucrette', 'osana'];
+
+        const resultnom = nombresrandom.map(function(nombreMay){
+            return nombreMay.toUpperCase();//cambia nombres a mayuscula
+        });
+        console.log(resultnom);
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo filter</title>
+</head>
+<body>
+    <script>
+    //Filtar a las personas de menor edad
+        let gente = [
+        {nombre: "aaron", edad: 65},
+        {nombre: "beth", edad: 2},
+        {nombre: "cara", edad: 13},
+        {nombre: "daniel", edad: 3},
+        {nombre: "ella", edad: 25},
+        {nombre: "fin", edad: 1},
+        {nombre: "george", edad: 43},
+    ]
+    let pequeños = gente.filter(persona => persona.edad <= 3);
+
+    console.log(pequeños);
+    //Ejemplo 2
+
+    let equipo = [
+    {
+        nombre: 'aaron',
+        posicion: 'developer'
+    },
+    {
+        nombre: 'beth',
+        posicion: 'ui designer'
+    },
+    {
+        nombre: 'cara',
+        posicion: 'developer'
+    },
+    {
+        nombre: 'daniel',
+        posicion: 'content manager'
+    },
+    {
+        nombre: 'ella',
+        posicion: 'cto'
+    },
+    {
+        nombre: 'finn',
+        posicion: 'backend engineer'
+    },
+    {
+        nombre: 'george',
+        posicion: 'developer'
+    }
+    ]
+    let desarrolladores = equipo.filter(miembro => miembro.posicion == 'developer')
+    console.log(desarrolladores)
+
+    //filtrar a todos los miembros que no son desarrolladores
+    let equipoNoDev = [
+	{
+  		nombre: "aaron",
+    	posicion: "developer"
+ 	 },
+  	{
+  		nombre: "beth",
+    	posicion: "ui designer"
+  	},
+  	{
+  		nombre: "cara",
+    	posicion: "developer"
+  	},
+ 	{
+  		nombre: "daniel",
+    	posicion: "content manager"
+ 	 },
+  	{
+  		nombre: "ella",
+    	posicion: "cto"
+  	},
+  	{
+  		nombre: "fin",
+    	posicion: "backend engineer"
+  	},
+  	{
+  		nombre: "george",
+    	posicion: "developer"
+  },
+
+]
+let noDesarrolladores = equipo.filter(miembros => miembros.posicion !== 'developer')
+
+console.log(noDesarrolladores);
+
+//Ejemplo 3: Cómo acceder a la propiedad índice
+
+    </script>
+</body>
+</html>
