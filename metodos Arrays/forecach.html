@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Each</title>
+</head>
+<body>
+    <script>
+        let numeros = [3,6,8,10,12]
+        let impar = 3;
+        numeros.forEach(function(numero){
+            if (numero === impar)
+            numeros.shift() //cera borrado el arreay
+            console.log(numeros)
+        }) 
+
+        //Acceder al propiedad de la indice
+        nombres = ['anna','beth', 'chris','daniel','ethan']
+
+        function pasarLista(nombre,indice){
+            console.log(`Este el numero de estudiante - ${indice + 1} - ${nombre} - presente? Si!`);
+        }
+
+        numeros.forEach((nombre, indice) => pasarLista(nombre, indice));
+
+        //Ejercicio 3
+        let foods = ['bread','rice','meat','pizza']
+
+        foods.forEach(function(food){
+            console.log(food)
+        })
+    </script>
+</body>
+</html>
