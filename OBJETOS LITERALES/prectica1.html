@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicas objetos</title>
+</head>
+<body>
+    <label>Nombre:</label>
+    <input type="text" id="nombre">
+    <label>Grado:</label>
+    <input type="text" id="grado">
+    <label>Usuario</label>
+    <input type="text" id="user">
+
+    <button id="ingresar" onclick="agregar()">Ingresar</button>
+    <div id="concursantes"></div>
+    <script>
+        const d = document;
+        const button = d.getElementById('ingresar')
+        listaConcursantes = []
+
+        function agregar(){
+            let nombre = d.getElementById('nombre').value;
+            let grado = d.getElementById('grado').value;
+            let user = d.getElementById('user').value;
+
+            if (nombre == '' || grado == '' || user == ''){
+                alert('Ingresa todas las casillas');
+            }
+
+            let estudiantes = {
+                nombre:nombre,
+                grado:grado,
+                usuario:user
+            }
+            listaConcursantes.push(estudiantes);
+
+            mostrar();
+
+            console.log(listaConcursantes);
+        }
+        function mostrar(){
+            let concursantes = d.getElementById('concursantes');
+            concursantes.innerHTML = ''
+
+            for (let i = 0; i < listaConcursantes.length; i++) {
+                const persona  = listaConcursantes[i] 
+             concursantes.textContent = `Nombre = ${persona.nombre} Grado = ${persona.grado} Usuario = ${persona.usuario}`
+    
+            }
+        }
+        function eliminar(){
+            
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria Diana Diaz</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="tarjeta_ingreso">
+            <h2>Ingresar Libro:</h2>
+            <form>
+                
+                <label>Titulo</label>
+                <input type="text" id="titulo">
+                
+                <label>Url de la imagen del libro.</label>
+                <input type="text" id="portada_libro">
+
+                <label>Autor</label>
+                <input type="text" id="autor">
+                
+                <label>Año publicado</label>
+                <input type="text" id="publicacion">
+                
+                <label>Prestado a:</label>
+                <input type="text" id="prestado">
+
+                <label>Disponible</label>
+                <select name="disponible"id="disponible">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select>
+
+                <button type="button" onclick="agregarLibro()">Ingresar Libro</button>
+            </form>
+        </div>
+
+        <section class="listalibros">
+            <select id="ordenarlibros">
+                <option value="titulo">Titulo</option>
+                <option value="autor">Autor</option>
+                <option value="publicacion">Publicación</option>
+            </select>
+            <h2>Libros Prestados</h2>
+            <div id="librosingresados"></div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
